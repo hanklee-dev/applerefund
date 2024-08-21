@@ -146,9 +146,11 @@
 
     <script src="js/common.js"></script>
     <script src="js/detail.js"></script>
+
+    <!-- Typebot 스크립트 추가 -->
     <script type="module">
-        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'
-        
+        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
+
         document.getElementById('refundButton').addEventListener('click', function() {
             Typebot.initPopup({ typebot: "applerefund-a26wrko" });
         });
