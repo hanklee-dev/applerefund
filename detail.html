@@ -34,6 +34,14 @@
             </div>
         </section>
         
+        <!-- Typebot iFrame -->
+        <section id="typebotSection" style="display:none; margin-top:20px;">
+            <iframe
+              src="https://typebot.co/applerefund-a26wrko"
+              style="border: none; width: 100%; height: 100vh;"
+            ></iframe>
+        </section>
+        
         <section class="app-meta-container">
             <div class="app-meta swiper">
                 <div class="swiper-wrapper">
@@ -142,30 +150,16 @@
                 </li>
             </ul>
         </section>
+
     </main>
 
     <script src="js/common.js"></script>
     <script src="js/detail.js"></script>
 
-    <!-- Typebot 스크립트 추가 -->
-    <script type="module">
-        import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js';
-
+    <!-- 환불 신청 버튼 클릭 시 iFrame 표시 -->
+    <script>
         document.getElementById('refundButton').addEventListener('click', function() {
-            Typebot.initPopup({ typebot: "applerefund-a26wrko" });
-        });
-
-        new Swiper('.app-meta', {
-            slidesPerView: 'auto',
-            spaceBetween: 20,
-            freeMode: true,
-        });
-
-        new Swiper('.preview-images', {
-            slidesPerView: 1.2,
-            spaceBetween: 10,
-            centeredSlides: true,
-            loop: true,
+            document.getElementById('typebotSection').style.display = 'block';
         });
     </script>
 </body>
